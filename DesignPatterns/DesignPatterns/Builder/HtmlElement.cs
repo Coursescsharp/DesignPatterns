@@ -14,6 +14,10 @@ public class HtmlElement
         Elements = new List<HtmlElement>();
     }
 
+    public HtmlElement(string name) : this()
+    {
+        Name = name ?? throw new ArgumentNullException(paramName: nameof(name));
+    }
     public HtmlElement(string name, string text) : this()
     {
         Name = name ?? throw new ArgumentNullException(paramName: nameof(name));

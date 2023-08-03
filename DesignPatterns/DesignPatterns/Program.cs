@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using DesignPatterns.Builder;
+using System.Text;
 
 var hello = "Hello";
 var sb = new StringBuilder();
@@ -22,3 +23,8 @@ foreach (var word in words)
 sb.Append("</ul>");
 
 Console.WriteLine(sb);
+
+var builder = new HtmlBuilder("ul");
+builder.AddChild("li", "hello").AddChild("li", "world");
+
+Console.WriteLine(builder.ToString());
