@@ -1,6 +1,9 @@
 ﻿using DesignPatterns.Builder;
+using DesignPatterns.Models;
 using System.Text;
 
+// Builder pattern
+/*
 var hello = "Hello";
 var sb = new StringBuilder();
 
@@ -28,3 +31,10 @@ var builder = new HtmlBuilder("ul");
 builder.AddChild("li", "hello").AddChild("li", "world");
 
 Console.WriteLine(builder.ToString());
+*/
+
+// Factories pattern
+
+// Factory Method
+var point = Point.NewCartesianPoint(1.0, Math.PI / 2);
+Console.WriteLine(point);
